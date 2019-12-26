@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | New Blog</title>
+
+</head>
+<body>
+{% extends 'mir/base.html' %}
+{% block content %}
+<br>
+<br>
+    <h4 style="color:green">Feedback related to content, design or technology with respect to the NPI can be sent through this interface.</h4>
+    <h6 style="color:green">Feedbaack Details Put Title as Your Name And Text as Feedback</h6>
+    <form action="" method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-success">Save</button>
+    </form>
+{% endblock %}
+</body>
+</html>

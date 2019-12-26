@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Delete</title>
+</head>
+<body>
+{% extends 'mir/base.html' %}
+
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-danger">Delete</button>
+    </form>
+{% endblock %}
+</body>
+</html>

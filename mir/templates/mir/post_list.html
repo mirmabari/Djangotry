@@ -1,0 +1,15 @@
+{% extends 'mir/base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date" style="color:green">
+                <br><br>
+                {{ post.published_date }}
+                {{ post.pk }}
+            </div>
+            <h2><a class="btn" href="/mir/post/{{ post.pk }}/">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <hr style="border-top: 1px dashed red;">
+        </div>
+    {% endfor %}
+{% endblock %}

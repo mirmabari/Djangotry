@@ -1,0 +1,13 @@
+{% extends 'mir/base.html' %}
+    {% block content %}
+    <br>
+<br>
+<br>
+
+    <h4 style="color:green">Registration Form for the New Employee</h4>
+    <h6 style="color:green">Fill Your Correct Information to serve us better</h6><br>
+    <form action="" method="POST" class="post-form" style="text-align:center">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-success">Register</button>
+    </form>
+    {% endblock %}
